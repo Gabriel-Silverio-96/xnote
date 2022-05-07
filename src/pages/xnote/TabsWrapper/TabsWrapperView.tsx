@@ -4,12 +4,12 @@ import { TabPanel, Tabs } from "react-tabs";
 import { IXnoteContent } from "../types/types.component";
 import { ButtonPlus, TabListStyled, TabStyled } from "./styled";
 
-const TabsWrapperView: React.FC<any> = ({ noteContent, createTab }) => {
+const TabsWrapperView: React.FC<any> = ({ noteContent, openDialogNewNote }) => {
     return (
         <Tabs>
             <TabListStyled>
                 <div className="tab-area custom-scroll">
-                    <ButtonPlus onClick={createTab}>+</ButtonPlus>
+                    <ButtonPlus onClick={openDialogNewNote}>+</ButtonPlus>
                     {
                         noteContent && !!noteContent.length ?
                             (

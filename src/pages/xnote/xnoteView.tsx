@@ -34,11 +34,7 @@ const xnoteView: React.FC<any> = (props) => {
 
                 <TabsWrapper />
 
-                <Dialog
-                    open={false}
-                    onClose={() => console.log("CLose")}
-                    onSave={() => console.log("Save")}
-                />
+                <Dialog />
 
             </PageStrecture>
             <Footer

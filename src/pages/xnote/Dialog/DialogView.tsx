@@ -2,7 +2,7 @@ import React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogBody, DialogFooter, ButtonPrimary, ButtonClose, ButtonSecundary, Input } from "./styled";
 import { IDialog } from "./types/types.component";
 
-const DialogView: React.FC<IDialog> = ({ onClose, onSave, onChange, open }) => {
+const DialogView: React.FC<any> = ({ onClose, onSave, onChange, open }) => {
     return (
         <Dialog role="dialog" open={open}>
             <DialogContent>

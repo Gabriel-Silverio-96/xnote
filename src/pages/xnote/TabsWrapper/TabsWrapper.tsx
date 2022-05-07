@@ -3,14 +3,14 @@ import React, { useContext } from "react";
 import TabsView from "./TabsWrapperView";
 
 const TabsWrapper: React.FC = () => {
-    const { noteContent } = useContext(XnoteContext);
+    const { noteContent, setIsOpenDialogNewNote } = useContext(XnoteContext);
 
-    const createTab = () => {
-      
+    const openDialogNewNote = () => {
+        setIsOpenDialogNewNote(prevState => !prevState);
     }
 
     
-    return <TabsView {... { noteContent, createTab }} />
+    return <TabsView {... { noteContent, openDialogNewNote }} />
 }
 
 export default TabsWrapper;
