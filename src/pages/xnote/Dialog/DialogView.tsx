@@ -2,7 +2,8 @@ import React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogBody, DialogFooter, ButtonPrimary, ButtonClose, ButtonSecundary, Input } from "./styled";
 import { IDialog } from "./types/types.component";
 
-const DialogView: React.FC<any> = ({ onClose, onSave, onChange, open }) => {
+const DialogView: React.FC<any> = ({ open, register, errors, handleSubmit, onSubmit, onClose }) => {
+    const isErrors = errors.tabName?.type === "required";
     return (
         <Dialog role="dialog" open={open}>
             <DialogContent>
@@ -13,12 +14,22 @@ const DialogView: React.FC<any> = ({ onClose, onSave, onChange, open }) => {
                     </ButtonClose>
                 </DialogHeader>
                 <DialogBody>
-                    <Input type="text" placeholder="Tab name" onChange={onChange} />
+                    <form onSubmit={handleSubmit(onSubmit)} id="createNote">
+                        <Input
+                            {
+                            ...register("tabName",
+                                { required: true })
+                            }
+                            type="text"
+                            placeholder="Tab name"
+                        />
+                        {isErrors && <span>Tab name is required</span>}
+                    </form>
                 </DialogBody>
 
                 <DialogFooter>
                     <ButtonSecundary onClick={onClose}>Close</ButtonSecundary>
-                    <ButtonPrimary onClick={onSave}>Save</ButtonPrimary>
+                    <ButtonPrimary form="createNote">Save</ButtonPrimary>
                 </DialogFooter>
             </DialogContent>
         </Dialog>
