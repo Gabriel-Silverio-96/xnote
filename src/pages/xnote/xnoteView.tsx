@@ -1,4 +1,4 @@
-import Dialog from "pages/xnote/Dialog";
+import DialogCreate from "pages/xnote/DialogCreate";
 import Footer from "components/Footer";
 import Modal from "components/Modal";
 import PageStrecture from "components/PageStrecture";
@@ -34,7 +34,7 @@ const xnoteView: React.FC<any> = (props) => {
 
                 <TabsWrapper />
 
-                <Dialog />
+                <DialogCreate />
 
             </PageStrecture>
             <Footer

@@ -1,9 +1,9 @@
 import React from "react";
-import { Dialog, DialogContent, DialogHeader, DialogBody, DialogFooter, ButtonPrimary, ButtonClose, ButtonSecundary, Input } from "./styled";
+import { ButtonClose, ButtonPrimary, ButtonSecundary, Dialog, DialogBody, DialogContent, DialogFooter, DialogHeader, Input } from "./styled";
 import { IDialog } from "./types/types.component";
 
-const DialogView: React.FC<any> = ({ open, register, errors, handleSubmit, onSubmit, onClose }) => {
-    const isErrors = errors.tabName?.type === "required";
+const DialogCreateView: React.FC<IDialog> = ({ open, register, errors, handleSubmit, onSubmit, onClose }) => {
+    const isErrors = errors.title?.type === "required";
     return (
         <Dialog role="dialog" open={open}>
             <DialogContent>
@@ -17,10 +17,9 @@ const DialogView: React.FC<any> = ({ open, register, errors, handleSubmit, onSub
                     <form onSubmit={handleSubmit(onSubmit)} id="createNote">
                         <Input
                             {
-                            ...register("tabName",
+                            ...register("title",
                                 { required: true })
                             }
-                            type="text"
                             placeholder="Tab name"
                         />
                         {isErrors && <span>Tab name is required</span>}
@@ -36,4 +35,4 @@ const DialogView: React.FC<any> = ({ open, register, errors, handleSubmit, onSub
     )
 };
 
-export default DialogView;
+export default DialogCreateView;
