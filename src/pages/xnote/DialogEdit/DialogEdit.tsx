@@ -3,7 +3,7 @@ import useLocalStorage from "common/hooks/useLocalStorage";
 import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
-import { IDialogTitle, INoteFields } from "../common/types/types.dialog";
+import { IDialogTitle, INoteFields } from "../common/types/dialog";
 import DialogEditView from "./DialogEditView";
 
 const DialogEdit: React.FC = () => {
