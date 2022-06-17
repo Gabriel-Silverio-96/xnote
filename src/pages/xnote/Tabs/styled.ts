@@ -17,7 +17,7 @@ export const TabStyled = styled(Tab)`
     padding: 0.55rem 1.5rem;
     border-radius: 0.5rem !important;
     cursor: pointer;
-    border: 0.1rem solid transparent !important;
+    border: 0.15rem solid transparent !important;
     font-weight: bold;
     animation: all 0.3s;
     color: #cfcfcf !important;
@@ -30,7 +30,7 @@ export const TabStyled = styled(Tab)`
 
 export const ButtonPlus = styled.button`
     font-size: 1.5rem;
-    border: 0.1rem solid transparent;    
+    border: 0.15rem solid transparent;    
     background-color: #CD00FE;     
     padding: 0.2rem 0.8rem;
     margin-right: 1rem;
