@@ -24,7 +24,7 @@ export const TabStyled = styled(Tab)`
     white-space: nowrap;
 
     &.react-tabs__tab--selected {
-        border: 0.1rem solid #CD00FE !important;
+        border: 0.15rem solid #CD00FE !important;
     }
 `
 
